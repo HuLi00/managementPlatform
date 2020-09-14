@@ -10,6 +10,8 @@ import '../node_modules/element-ui/lib/theme-chalk/index.css'
 // import {request} from "./network/Request";
 import axios from 'axios'
 
+import TreeTable from 'vue-table-with-tree-grid'
+
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/';
 //添加请求拦截器，在header中添加Authorization等于token字段
 axios.interceptors.request.use(config  => {
@@ -21,6 +23,8 @@ axios.interceptors.request.use(config  => {
 Vue.prototype.$http = axios;
 
 Vue.use(ElementUI)
+
+Vue.component('tree-table',TreeTable)
 
 Vue.config.productionTip = false
 
