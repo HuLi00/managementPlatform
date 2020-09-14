@@ -8,7 +8,9 @@ const Mainwel = () => import('../views/welMain');
 const User = () => import('../users/User');
 const Rights = () => import('../power/Rights');
 const Roles = () => import('../power/Roles');
-const Cate = () => import('../goods/Cate')
+const Cate = () => import('../goods/Cate');
+const CateParams = () => import('../goods/CateParams');
+const Goods = () => import('../goods/Goods');
 
 //使用vue—router
 Vue.use(Router)
@@ -53,6 +55,14 @@ const router =  new Router ({
           path:'categories',
           component:Cate
         },
+        {
+          path:'params',
+          component:CateParams
+        },
+        {
+          path:'goods',
+          component:Goods
+        }
       ],
     },
   ],
