@@ -10,7 +10,8 @@ const Rights = () => import('../power/Rights');
 const Roles = () => import('../power/Roles');
 const Cate = () => import('../goods/Cate');
 const CateParams = () => import('../goods/CateParams');
-const Goods = () => import('../goods/Goods');
+const Goods = () => import('../goods/GoodsList');
+const AddGoods = () => import('../goods/AddGoods')
 
 //使用vue—router
 Vue.use(Router)
@@ -61,8 +62,12 @@ const router =  new Router ({
         },
         {
           path:'goods',
-          component:Goods
-        }
+          component:Goods,
+        },
+        {
+          path:'goods/add',
+          component:AddGoods
+        },
       ],
     },
   ],
